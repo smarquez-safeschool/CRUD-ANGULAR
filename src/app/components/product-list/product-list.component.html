@@ -1,0 +1,19 @@
+<div class="card card-body" *ngFor='let product of products'>
+    <div class="row">
+        <div class="col-8">
+            <ul>
+                <li>
+                    Nombre : {{product.name}}
+                </li>
+                <li>
+                    Precio : {{product.price}}
+                </li>
+            </ul>
+            <button class="btn btn-secondary mt-4 mr-2" [routerLink]="['product','edit',product.id]">Editar</button>
+            <button class="btn btn-danger mt-4" (click)="eliminarProducto(product.id)">Eliminar</button>
+        </div>
+        <div class="col-4">
+            <img [src] = "product.urlImg" class='card-img'>
+        </div>
+    </div>
+</div>

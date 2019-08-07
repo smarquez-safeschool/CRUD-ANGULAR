@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-6 offset-3">
+        <form (submit)= "edit?editar():registrar()" class="mt-5">
+            <div class="form-group">
+                <input [(ngModel)]="product.name" type="text" class="form-control" name ='name' placeholder="Ingrese Nombre" >
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="product.price" type="number" class="form-control"  name ='price'placeholder="Ingrese Precio" >
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="product.urlImg" type="text" class="form-control" name ='url' placeholder="Ingrese Url" >
+            </div>
+            <button class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+</div>
